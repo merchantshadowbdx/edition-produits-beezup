@@ -161,8 +161,8 @@ def main():
         st.session_state.catalog_id = ""
 
     # Barre latérale simplifiée
-    sidebar_logo = "./images/OCTOPIA_Logo_RVB.svg"
-    main_body_logo = "./images/OCTOPIA_Logo_RVB_OC.svg"
+    sidebar_logo = "./images/OCTOPIA_Logo_WHITE.svg"
+    main_body_logo = "./images/OCTOPIA_Logo_WHITE_OC.svg"
 
     st.logo(sidebar_logo, size="large", icon_image=main_body_logo)
 
