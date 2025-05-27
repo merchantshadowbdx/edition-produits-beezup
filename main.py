@@ -302,16 +302,10 @@ def main():
                     st.toast("Tous les produits ont été traités", icon="🎉")
 
                     # Réinitialisation du session_state
-                    # for key in ["token", "catalog", "df_attributes", "selected_attr", "df_renamed", "df_restored",
-                    #             "edit_launched"]:
-                    #     if key in st.session_state:
-                    #         del st.session_state[key]
-
-                    if st.button("🔁 Réinitialiser la sélection"):
-                        for key in ["selected_attr", "df_renamed", "df_restored", "edit_launched"]:
-                            if key in st.session_state:
-                                del st.session_state[key]
-                        st.rerun()
+                    for key in ["token", "catalog", "df_attributes", "selected_attr", "df_renamed", "df_restored",
+                                "edit_launched"]:
+                        if key in st.session_state:
+                            del st.session_state[key]
 
         elif df_renamed is not None and not df_renamed.empty:
             with st.container(border=True):
