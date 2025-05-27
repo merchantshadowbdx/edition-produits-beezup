@@ -327,7 +327,7 @@ def main():
     # --- Onglet 2 : suppression ---
     with tab2:
         st.title("SUPPRESSION DES VALEURS EDITEES")
-        st.image(image="coming_soon.png", width=1000)
+        st.image(image="images/coming_soon.png", width=1000)
 
 
 if __name__ == "__main__":
