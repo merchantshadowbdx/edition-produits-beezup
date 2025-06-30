@@ -275,8 +275,11 @@ def main():
                         for col in column_id_cols:
                             val = row[col]
                             if pd.notna(val) and val != "None" and val != "":
-                                # payload[col] = str(val)
-                                payload[col] = f"{val}"
+                                # Vérifie si c'est un float équivalent à un entier
+                                if isinstance(val, float) and val.is_integer():
+                                    payload[col] = str(int(val))
+                                else:
+                                    payload[col] = str(val)
 
                         try:
                             success = edit_attributes(catalog_id, product_id, payload, bzp_token)
