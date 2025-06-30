@@ -276,7 +276,7 @@ def main():
                             val = row[col]
                             if pd.notna(val) and val != "None" and val != "":
                                 # payload[col] = str(val)
-                                payload[col] = val
+                                payload[col] = f"{val}"
 
                         try:
                             success = edit_attributes(catalog_id, product_id, payload, bzp_token)
